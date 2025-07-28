@@ -72,9 +72,12 @@ generateImages = (tree) ->
       # command line tool, and trim with graphicsmagick
       do (f) ->
         file.on 'finish', ->
-          exec "sips -s format png #{f}.pdf --out #{f}.png", ->
-            fs.unlink "#{f}.pdf"
-            exec "gm convert #{f}.png -trim #{f}.png"
+          exec "sips -s format png #{f}.pdf --out #{f}.png", (err) ->
+            if err then console.error err
+            fs.unlink "#{f}.pdf", (err) ->
+              if err then console.error err
+              exec "gm convert #{f}.png -trim #{f}.png", (err) ->
+                if err then console.error err
             
       doc.end()
 

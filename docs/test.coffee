@@ -87,6 +87,6 @@ doc.addPage()
 # Add a list with a font loaded from a TrueType collection file   
 doc.fillColor('#000')
    .font('fonts/Chalkboard.ttc', 'Chalkboard', 16)
-   .list(['One', 'Two', 'Three'], 100, 150)
+   doc.list(['One', 'Two', 'Three'], 100, 150)
         
 doc.end()

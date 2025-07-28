@@ -20,34 +20,39 @@
 - [ ] Generate source maps for debugging
 - [ ] Add TypeScript declaration files
 
-## Phase 2: CoffeeScript Migration
+## Phase 2: CoffeeScript Migration (Completed)
 
 ### Core Modules
-- [ ] Convert `lib/data.coffee` to JavaScript
-- [ ] Convert `lib/path.coffee` to JavaScript
-- [ ] Convert `lib/object.coffee` to JavaScript
-- [ ] Convert `lib/reference.coffee` to JavaScript
-- [ ] Convert `lib/page.coffee` to JavaScript
-- [ ] Convert `lib/gradient.coffee` to JavaScript
+- [x] Converted `lib/data.coffee` to JavaScript
+- [x] Converted `lib/path.coffee` to JavaScript
+- [x] Converted `lib/object.coffee` to JavaScript
+- [x] Converted `lib/reference.coffee` to JavaScript
+- [x] Converted `lib/page.coffee` to JavaScript
+- [x] Converted `lib/gradient.coffee` to JavaScript
 
 ### Font System
-- [ ] Convert `lib/font.coffee` to JavaScript
-- [ ] Convert `lib/font/afm.coffee` to JavaScript
-- [ ] Convert `lib/font/embedded.coffee` to JavaScript
-- [ ] Convert `lib/font/standard.coffee` to JavaScript
+- [x] Converted `lib/font.coffee` to JavaScript
+- [x] Converted `lib/font/afm.coffee` to JavaScript
+- [x] Converted `lib/font/embedded.coffee` to JavaScript
+- [x] Converted `lib/font/standard.coffee` to JavaScript
 
 ### Mixins
-- [ ] Convert `lib/mixins/annotations.coffee` to JavaScript
-- [ ] Convert `lib/mixins/color.coffee` to JavaScript
-- [ ] Convert `lib/mixins/fonts.coffee` to JavaScript
-- [ ] Convert `lib/mixins/images.coffee` to JavaScript
-- [ ] Convert `lib/mixins/text.coffee` to JavaScript
-- [ ] Convert `lib/mixins/vector.coffee` to JavaScript
+- [x] Converted `lib/mixins/annotations.coffee` to JavaScript
+- [x] Converted `lib/mixins/color.coffee` to JavaScript
+- [x] Converted `lib/mixins/fonts.coffee` to JavaScript
+- [x] Converted `lib/mixins/images.coffee` to JavaScript
+- [x] Converted `lib/mixins/text.coffee` to JavaScript (split into `text_core.js` and `text_list.js`)
+- [x] Converted `lib/mixins/vector.coffee` to JavaScript
 
 ### Main Classes
-- [ ] Convert `lib/document.coffee` to JavaScript
-- [ ] Convert `lib/image.coffee` to JavaScript
-- [ ] Convert `lib/line_wrapper.coffee` to JavaScript
+- [x] Converted `lib/document.coffee` to JavaScript
+- [x] Converted `lib/image.coffee` to JavaScript
+- [x] Converted `lib/line_wrapper.coffee` to JavaScript
+
+### Post-Conversion Tasks
+- [ ] Manually review and modernize converted JavaScript files (ES6+ features, etc.)
+- [ ] Update `Makefile` and `package.json` to reflect JavaScript files and remove CoffeeScript build steps
+- [ ] Address Node.js API deprecations (e.g., `Buffer()`, `fs.unlink` callbacks)
 
 ## Phase 3: Variable Fonts Implementation
 
